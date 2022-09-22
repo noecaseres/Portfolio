@@ -1,0 +1,57 @@
+#about{
+    max-width: 100%;
+    padding: 0 2rem;
+    background-color: #f8f7fb;
+    margin-bottom: 7rem;
+}
+
+.about-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    padding-bottom: 2rem;
+    align-items: center;
+
+    p{
+        font-size: 1.4rem;
+        line-height: 1.5;
+        position: relative;
+    } 
+    
+    img{
+        height: auto;
+        width: 30rem;
+        max-width:100%;
+        margin: 2rem 0;
+        
+    }
+}
+
+
+//>Large
+@media (min-width: $breakpoint-large) {
+    #about{
+        height: 100vh;
+        padding: 0 4rem;
+        margin-bottom: 0;
+
+    }
+    .about-container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 30rem 1fr;
+        gap: 4rem; 
+ 
+
+        p{
+            background-color: transparent;
+            font-size: 1.75rem;
+        }
+
+        img{
+            width: 30rem;
+        }
+
+    }
+  }

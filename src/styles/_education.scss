@@ -1,0 +1,87 @@
+#education{
+    max-width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 7rem;
+
+
+    h2{
+        margin-bottom: 2rem;
+    }
+}
+
+.card{
+    width: 100%;
+}
+
+.grid-container{
+    width: 100%;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+}
+
+.card-content{
+    background-color: #f8f7fb;
+    color: #242424;
+    border-radius: .5rem;
+    padding: 2.5rem;
+    height: 100%;
+    margin-bottom: 1rem;
+}
+
+.skills-list{
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(120px, 1fr));
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+        
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: #f8f7fb;
+        border-radius: .5rem;
+
+        padding: 1.5rem;
+
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    img{
+        width: 2rem;
+        margin-right: .25rem;
+    }
+}
+
+//>Tablet
+// @media (min-width: $breakpoint-tablet) {
+//     .card{
+//         width: 60%;
+//     }
+// }
+
+//>Large
+@media (min-width: $breakpoint-large) {
+    #education{
+        padding: 0 4rem;
+        margin: 4rem 0 0 0;
+    }
+
+    .card{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
+        width: 100%;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 1.5rem;
+    }
+
+}
+

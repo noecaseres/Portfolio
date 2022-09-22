@@ -1,0 +1,84 @@
+#contact{
+    padding: 8rem 2rem;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    h3{
+        font-size: .75rem;
+    }
+
+    h2{
+        margin-bottom: 1rem;
+    }
+
+    .flex-container{
+        display: flex;
+        flex-direction: column;
+        // flex-wrap: wrap;
+        align-items: center;
+    }
+
+
+    .contact-item-content{
+        display: flex;
+        width: fit-content;
+        justify-content: center;
+        align-items: center;
+        padding: .5rem 1rem;
+        border-radius: .5rem;
+        margin-top: 2rem;
+
+        &:hover{
+            background-color: #f8f7fb;
+            cursor: pointer;
+
+        }
+
+    }
+
+    a{
+        color: black;
+        display: flex;
+    }
+
+}
+
+.contact-icon{
+    width: 1.5rem;
+    margin-right: .75rem;
+}
+
+//>Tablet
+@media (min-width: $breakpoint-tablet){
+    #contact {
+
+        h3{
+            font-size: 1rem;
+        }
+    }
+    .contact-container{
+        .flex-container{
+            flex-direction: row;
+        }
+    }
+
+    
+    }
+
+
+//>Large
+@media (min-width: $breakpoint-tablet){
+    #contact{
+        padding: 7rem 4rem;
+    }
+}
+
+
+
+       
+        

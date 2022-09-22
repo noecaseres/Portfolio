@@ -1,0 +1,94 @@
+.navbar{
+    padding: 0rem;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    margin-bottom: .5rem;
+}
+
+
+.ul-navbar{
+    position: absolute;
+    right: 3rem;
+    height: 100vh;
+    max-width: 0; //oculto
+    margin-top: 4rem;
+    overflow: hidden;
+    font-size: 3rem;
+    z-index: 100;
+    font-family: 'Noto Sans Mono', monospace;
+
+    li{
+        text-align: right;
+        cursor: pointer;
+        .link{
+            color: #fff;
+          
+        }
+        .link:hover{
+            color: $dark-blue;
+        }
+    }
+}
+
+.show{
+    max-width: 100%;
+}
+
+.navbar-bg{
+    left: 0;
+    top: 0;
+    background-color: $blue;
+    height: 100%;
+    position: fixed;
+}
+
+.block-scroll{
+    overflow: hidden;
+}
+
+
+.menu-icon{
+    font-size:1rem;
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    z-index: 3;
+    margin: 0 auto;
+    border-radius: 50%;
+    color: $white;
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem; 
+    background-color: $blue;
+}
+
+.background-icon{
+    background-color: #fff;
+    color: $blue;
+}
+
+//>Tablets
+@media (min-width: $breakpoint-tablet){
+    .navbar-bg{
+        width: calc(100% + 16rem);
+        height: calc(100% + 10rem);
+        margin-left: -16rem;
+        margin-top: -10rem;
+    }
+
+    .ul-navbar{
+        margin-right: -8rem;
+        margin-top: 13rem;
+    }
+    
+    .show{
+        right: 16rem;
+    }
+
+    
+    .menu-icon{
+        right: 3rem;
+    }
+}

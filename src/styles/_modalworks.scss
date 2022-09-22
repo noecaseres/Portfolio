@@ -1,0 +1,222 @@
+.portfolio-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+.project-container{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+   
+    &:hover > .project-overlay{
+        display: flex;  
+      
+    }
+
+    &:hover > .cover-photo{
+        transform: scale(1.1);
+
+    }
+
+}
+
+.cover-photo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .2s ease-in-out;
+  
+}
+
+
+.project-overlay{
+    position: absolute;
+    z-index: 2;
+    background: rgba(49,49,49,0.8);
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    
+    h3,p{
+       color: $white;
+    }
+}
+
+
+
+//---------Modal-----------//
+body.active-modal {
+    overflow: hidden;
+
+}
+
+.modal
+,.overlay
+ {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.hide{
+    z-index: 5;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.modal-container {
+    position: absolute;
+    background-color: white;
+    height: 84%;
+    width: 90%;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 1rem;
+    line-height: 1.4;
+    padding: 1rem;
+    border-radius: .5rem;
+
+}
+
+//Modal content
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    font-size: 1rem;
+    color: black;   
+    padding: 1rem;
+
+}
+
+.modal-content{
+    height: 50%;
+    width: 100%;
+    padding: .5rem;
+    margin-top: 3rem;
+
+    iframe{
+        display: block;
+//   max-width:40rem;
+//   max-height:30rem;
+//   width: auto;
+//   height: auto;
+        margin: 0 auto;        
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .modal-text{
+        width: 100%;
+
+        h3{
+            margin-top: 1rem;
+        }
+
+        h4{
+            font-weight: 400;
+            margin-top: 2rem;
+        }
+
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            margin: .5rem 0 0 0;   
+
+        
+        .tech-pill{
+            padding: .5rem 1.25rem;
+            background-color:  #f8f7fb;
+            border-radius: 1rem;
+            margin: 0.25rem;
+            font-weight: 300;
+            font-size: .85rem;
+            letter-spacing: 0.05rem;
+        }   
+    }
+
+    }
+}
+
+.github-anchor{
+    margin: 2rem 0;
+    background-color: transparent;
+
+    a{
+      display: flex;
+      align-items: center;
+    }
+
+    p{
+      color:black;
+      font-size: 1rem;  
+      margin-left: 1rem;
+    }
+
+    img{
+        width: 2rem; 
+    }   
+    }
+
+//>large
+@media (min-width: $breakpoint-large){
+    .portfolio-container{
+        grid-template-columns: repeat(auto-fit,minmax(578px, 1fr));
+    } 
+
+    .project-container{
+        width: 100%;
+    }
+
+    .modal-container{
+        height: 80%;
+        width: 80%;
+    }
+
+    .modal-content{
+        height: 90%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+    
+        iframe{
+            margin-right: 3rem;
+            flex-grow: 1;
+
+        }
+        .modal-text{
+            width: 40%;
+
+            h3{
+                margin-top: 0;
+            }
+    
+            h4{
+                margin-top: 3rem;
+            }
+    
+        }
+    }
+
+    .github-anchor{
+        margin-top: 3rem;
+    }
+
+}
