@@ -44,6 +44,8 @@ export const Education = () => {
                     <div><img src="./images/icons/react.svg"/>ReactJS</div>
                     <div><img src="./images/icons/bootstrap.svg"/>Bootstrap</div>
                     <div><img src="./images/icons/sass.svg"/>Sass</div>
+                    <div><img src="./images/icons/restapi.svg"/>REST API</div>
+
                 </div>
             </div>
     </section>

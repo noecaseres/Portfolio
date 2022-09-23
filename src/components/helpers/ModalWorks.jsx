@@ -16,7 +16,8 @@ export const ModalWorks = () => {
         {id:"2",tech:"CSS3"},
         {id:"3",tech:"ReactJS"},
         {id:"4",tech:"React-Router-Dom"},
-        {id:"5",tech:"Bootstrap"}
+        {id:"5",tech:"Bootstrap"},
+        {id:"6",tech:"REST API"}
       ]
     },
     {
